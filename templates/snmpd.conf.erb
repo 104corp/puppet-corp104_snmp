@@ -35,15 +35,15 @@ sysLocation <%= @syslocation %>
 sysContact <%= @syscontact %>
 sysServices <%= @sysservices %>
 
-# PASS MIB OID
 <% if @pass -%>
+# PASS MIB OID
 <% @pass.each do |pass_opt| -%>
 pass <%= pass_opt %>
 <% end -%>
 <% end -%>
 
-# EXTEND
 <% if @extend -%>
+# EXTEND
 <% @extend.each do |extend_opt| -%>
 extend <%= extend_opt %>
 <% end -%>
