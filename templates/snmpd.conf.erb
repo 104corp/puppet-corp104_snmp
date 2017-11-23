@@ -1,0 +1,50 @@
+# snmpd.conf: Managed by puppet.
+
+#### AGENT BEHAVIOUR ####
+agentaddress <%= @agentaddress.join(", ") -%>
+
+#### ACCESS CONTROL ####
+
+# Traditional Access Control
+rocommunity <%= @rocommunity_pass %> <%= @rocommunity_network %>
+rocommunity6 <%= @rocommunity6_pass %> <%= @rocommunity6_network %>
+
+# VACM Configuration
+#       sec.name       source        community
+com2sec <%= @com2sec_name %> <%= @com2sec_source %> <%= @com2sec_community %>
+com2sec6 <%= @com2sec6_name %> <%= @com2sec6_source %> <%= @com2sec6_community %>
+
+# groupName  securityModel   securityName
+<% @groups.each do |group| -%>
+group <%= group %>
+<% end -%>
+
+# name  incl/excl  subtree  mask(optional)
+<% @views.each do |view| -%>
+view <%= view %>
+<% end -%>
+
+# group  context sec.model sec.level prefix read  write notify
+<% @access.each do |access_opt| -%>
+access <%= access_opt %>
+<% end -%>
+
+#### SYSTEM INFORMATION ####
+# System Group
+sysLocation <%= @syslocation %>
+sysContact <%= @syscontact %>
+sysServices <%= @sysservices %>
+
+# PASS MIB OID
+<% if @pass -%>
+<% @pass.each do |pass_opt| -%>
+pass <%= pass_opt %>
+<% end -%>
+<% end -%>
+
+# EXTEND
+<% if @extend -%>
+<% @extend.each do |extend_opt| -%>
+extend <%= extend_opt %>
+<% end -%>
+<% end -%>
