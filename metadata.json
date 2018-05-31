@@ -1,9 +1,9 @@
 {
   "name": "104corp-corp104_snmp",
   "description": "corp104_snmp Module for Debian, Ubuntu, CentOS and RHEL.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "104corp",
-  "summary": "Install, deploysm, and configures AWS agent services.",
+  "summary": "Install, deploysm, and configures SNMP services.",
   "license": "Apache-2.0",
   "source": "https://github.com/104corp/corp104_snmp",
   "project_page": "https://github.com/104corp/corp104_snmp",

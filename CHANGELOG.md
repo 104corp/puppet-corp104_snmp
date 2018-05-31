@@ -1,3 +1,7 @@
+## 2018-05-31 - Release 0.0.3
+
+  - fix metadata summary.
+
 ## 2017-11-23 - Release 0.0.2
 
  - fix $agentaddress bug.
