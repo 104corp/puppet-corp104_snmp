@@ -1,6 +1,6 @@
 # This file is Managed by Puppet.
 <% if ! @snmp_daemon_opts.empty? -%>
 <% @snmp_daemon_opts.each do |hash_key,hash_value| -%>
-<%= hash_key %>=<%= hash_value -%>
+<%= hash_key %>='<%= hash_value -%>'
 <% end -%>
 <% end -%>
