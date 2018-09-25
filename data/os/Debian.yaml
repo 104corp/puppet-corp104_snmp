@@ -1,2 +1,2 @@
 corp104_snmp::package_name: 'snmpd'
-corp104_snmp::daemon_opts: '/etc/default/snmpd'
+corp104_snmp::daemon_config: '/etc/default/snmpd'

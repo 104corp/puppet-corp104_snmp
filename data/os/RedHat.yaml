@@ -1,2 +1,2 @@
 corp104_snmp::package_name: 'net-snmp'
-corp104_snmp::daemon_opts: '/etc/sysconfig/snmpd'
+corp104_snmp::daemon_config: '/etc/sysconfig/snmpd'
