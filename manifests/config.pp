@@ -11,4 +11,13 @@ class corp104_snmp::config inherits corp104_snmp {
     content => template("${module_name}/snmpd.conf.erb"),
     notify  => Service['snmp'],
   }
+
+  # fix daemon directory not found.
+  if $facts['os']['family'] == 'Debian' {
+    file { '/etc/default': ensure => directory }
+  }
+  elsif $facts['os']['family'] == 'RedHat' {
+    file { '/etc/sysconfig': ensure => directory }
+  }
+
 }

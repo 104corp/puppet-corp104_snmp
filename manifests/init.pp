@@ -47,6 +47,8 @@ class corp104_snmp (
   String $service_name,
   String $service_ensure,
   String $snmp_config,
+  String $snmp_daemon_config,
+  Optional[Array] $snmp_daemon_opts,
   Array $agentaddress,
   String $rocommunity_pass,
   String $rocommunity_network,

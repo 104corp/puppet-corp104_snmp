@@ -2,6 +2,7 @@ corp104_snmp::snmp_config: '/etc/snmp/snmpd.conf'
 corp104_snmp::agentaddress:
   - 'udp:127.0.0.1:161'
   - 'udp6:[::1]:161'
+corp104_snmp::snmp_daemon_opts: ~
 corp104_snmp::rocommunity_pass: 'public'
 corp104_snmp::rocommunity_network: 'default'
 corp104_snmp::rocommunity6_pass: 'public'
