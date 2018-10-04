@@ -1,3 +1,7 @@
+## 2018-10-04 - Release 0.0.6
+
+  - add daemon variable.
+
 ## 2018-05-31 - Release 0.0.3
 
   - fix metadata summary.
