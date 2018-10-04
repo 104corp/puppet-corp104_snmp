@@ -17,12 +17,14 @@ class corp104_snmp::config inherits corp104_snmp {
     file { 'snmpd_daemon_path':
       ensure => directory,
       path   => '/etc/default',
+      mode   => '0755',
     }
   }
   elsif $facts['os']['family'] == 'RedHat' {
     file { 'snmpd_daemon_path':
       ensure => directory,
       path   => '/etc/sysconfig',
+      mode   => '0755',
     }
   }
 
@@ -30,6 +32,7 @@ class corp104_snmp::config inherits corp104_snmp {
     file { 'snmpd_daemon_file':
       ensure  => file,
       path    => $daemon_config,
+      mode   => '0644',
       content => template("${module_name}/snmpd.erb"),
       require => File['snmpd_daemon_path'],
     }
