@@ -1,3 +1,7 @@
+## 2018-12-26 - Release 1.0.0
+
+  - fix all bug.
+
 ## 2018-10-04 - Release 0.0.6
 
   - add daemon variable.
