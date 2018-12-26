@@ -28,11 +28,11 @@ class corp104_snmp::config inherits corp104_snmp {
     }
   }
 
-  if $daemon_opts {
+  if $corp104_snmp::daemon_opts {
     file { 'snmpd_daemon_file':
       ensure  => file,
-      path    => $daemon_config,
-      mode   => '0644',
+      path    => $corp104_snmp::daemon_config,
+      mode    => '0644',
       content => template("${module_name}/snmpd.erb"),
       require => File['snmpd_daemon_path'],
     }
